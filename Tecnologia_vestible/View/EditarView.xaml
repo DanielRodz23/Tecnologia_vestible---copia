@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tecnologia_vestible.View.EditarView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar" Command="{Binding GuardarCommand}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+
+            <Label Text="Nombre:"></Label>
+            <Entry Text="{Binding DispositivoVestible.Nombre}"></Entry>
+
+            <Label Text="Marca:"></Label>
+            <Entry Text="{Binding DispositivoVestible.Marca}"></Entry>
+
+            <Label Text="Precio actual del mercado:"></Label>
+            <Entry Keyboard="Numeric" Text="{Binding DispositivoVestible.Precio}" ></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tecnologia_vestible.View.DetallesDispositivo">
+    <ContentPage.Content>
+        <StackLayout Margin="10" Background="LightGray">
+            <Image Aspect="AspectFit"  HorizontalOptions="Center" Source="{Binding Imagen}"></Image>
+            <Label Text="{Binding Nombre}"></Label>
+            <Label Text="{Binding Marca}"></Label>
+            <Label Text="{Binding Precio, StringFormat='Precio: {0}'}"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

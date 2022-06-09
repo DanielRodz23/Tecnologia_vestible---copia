@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:model="clr-namespace:Tecnologia_vestible.Model" xmlns:viewmodel="clr-namespace:Tecnologia_vestible.ViewModel"
+             x:Class="Tecnologia_vestible.View.Nuevo">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AgregarCommand}" Text="Agregar"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nombre:"></Label>
+            <Entry Text="{Binding DispositivoVestible.Nombre}"></Entry>
+
+            <Label Text="Marca:"></Label>
+            <Entry Text="{Binding DispositivoVestible.Marca}"></Entry>
+
+            <Label Text="URL de imagen:"></Label>
+            <Entry Text="{Binding DispositivoVestible.Imagen}"></Entry>
+
+            <Label Text="Precio actual:"></Label>
+            <Entry Keyboard="Numeric" Text="{Binding DispositivoVestible.Precio}"></Entry>
+
+            <Label Text="{Binding Error}" HorizontalOptions="Center" TextColor="Red" FontSize="Small"></Label>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
