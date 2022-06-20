@@ -4,10 +4,12 @@
              xmlns:model="clr-namespace:Tecnologia_vestible.Model" xmlns:viewmodel="clr-namespace:Tecnologia_vestible.ViewModel"
              x:Class="Tecnologia_vestible.View.Nuevo">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding AgregarCommand}" Text="Agregar"></ToolbarItem>
+        <ToolbarItem Command="{Binding AgregarCommand}" IconImageSource="https://cdn-icons.flaticon.com/png/512/4254/premium/4254034.png?token=exp=1655734585~hmac=e584c5b7c14b2b2689bdd3c00aaf1b12"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="Beige">
+            <Label TextColor="Black" HorizontalOptions="Center" FontSize="40" Text="Agregar nuevo"></Label>
+
             <Label Text="Nombre:"></Label>
             <Entry Text="{Binding DispositivoVestible.Nombre}"></Entry>
 

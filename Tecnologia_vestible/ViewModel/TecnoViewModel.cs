@@ -124,10 +124,18 @@ namespace Tecnologia_vestible.ViewModel
                 {
                     Error = "Escriba el nombre";
                 }
-
+                for (int i = 0; i < Lista.Count; i++)
+                {
+                    if (Lista[i].Nombre == DispositivoVestible.Nombre)
+                    {
+                        Error = "No se puede repetir dispositivo";
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Error)));
+                        return;
+                    }
+                }
                 if (string.IsNullOrWhiteSpace(DispositivoVestible.Imagen))
                 {
-                    Error = "Inserte URL de imagen";
+                    DispositivoVestible.Imagen= "https://cdn-icons.flaticon.com/png/512/3875/premium/3875148.png?token=exp=1655734146~hmac=b40b22121a4722b4391724fa7c0fd412";
                 }
                 if (string.IsNullOrWhiteSpace(DispositivoVestible.Marca))
                 {

@@ -11,7 +11,7 @@ namespace Tecnologia_vestible
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new VistaPrincipal());
+            MainPage = new NavigationPage(new VistaPrincipal() {  });
         }
 
         protected override void OnStart()

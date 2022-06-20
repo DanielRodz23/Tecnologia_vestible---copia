@@ -6,7 +6,9 @@
         <ToolbarItem Text="Guardar" Command="{Binding GuardarCommand}"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Margin="10">
+        <StackLayout BackgroundColor="Beige" Margin="10">
+            <Label TextColor="Black" HorizontalOptions="Center" FontSize="40" Text="Editar"></Label>
+
 
             <Label Text="Nombre:"></Label>
             <Entry Text="{Binding DispositivoVestible.Nombre}"></Entry>
@@ -16,6 +18,21 @@
 
             <Label Text="Precio actual del mercado:"></Label>
             <Entry Keyboard="Numeric" Text="{Binding DispositivoVestible.Precio}" ></Entry>
+            
+            <StackLayout IsVisible="False">
+                <StackLayout.Style>
+                    <Style TargetType="StackLayout">
+                        <Style.Triggers>
+                            <DataTrigger TargetType="StackLayout" Binding="{Binding DispositivoVestible.Imagen}" 
+                                     Value="https://cdn-icons.flaticon.com/png/512/3875/premium/3875148.png?token=exp=1655734146~hmac=b40b22121a4722b4391724fa7c0fd412">
+                                <Setter Property="IsVisible" Value="True"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackLayout.Style>
+                <Label Text="Insertar imagen:"></Label>
+                <Entry Text="{Binding DispositivoVestible.Imagen}" ></Entry>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
